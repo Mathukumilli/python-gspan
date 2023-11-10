@@ -1,5 +1,5 @@
 # Online Python compiler (interpreter) to run Python online.
-# Write Python 3 code in this online editor and run it.
+# Write Python 3 code in this online editor and run 
 import re, textwrap
 
 def items_len(l):
@@ -77,7 +77,9 @@ if __name__ == '__main__':
     if s=="":
         raise Exception("input can't be empty")
     #s = 'This=s is a simple text but a complicated problem to be solved, so we are adding more text to see that it actually works.'
-    d= int(input("enter width:"))
+    d= input("enter width:")
+    if type(d) != int:
+        raise Exception ("input should be of integer")
     if s=="":
         raise Exception("width can't be empty")
     if d<0:
