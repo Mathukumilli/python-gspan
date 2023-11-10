@@ -1,3 +1,5 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
 import re, textwrap
 
 def items_len(l):
@@ -72,10 +74,14 @@ def para(paragraph, width, debug=0):
 
 if __name__ == '__main__':
     s= input ("enter paragraph:")
-    # s = 'This is a simple text but a complicated problem to be solved, so we are adding more text to see that it actually works.'
+    if s=="":
+        raise Exception("input can't be empty")
+    #s = 'This=s is a simple text but a complicated problem to be solved, so we are adding more text to see that it actually works.'
     d= int(input("enter width:"))
+    if s=="":
+        raise Exception("width can't be empty")
+    if d<0:
+        raise Exception("width can't be negative")
     c = para(s, width=d, debug=1)
-    a= input("enter the index value:")
-    a = int(a)
-    print('"{0}"'.format(c[a]))
-    
+    for i in range(len(c)):
+        print('Array[{0}] = "{1}"'.format(i+1, c[i]))
