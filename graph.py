@@ -74,7 +74,7 @@ if __name__ == '__main__':
     s= input ("enter paragraph:")
     # s = 'This is a simple text but a complicated problem to be solved, so we are adding more text to see that it actually works.'
     d= int(input("enter width:"))
-    c = para(s, width=20, debug=1)
+    c = para(s, width=d, debug=1)
     a= input("enter the index value:")
     a = int(a)
     print('"{0}"'.format(c[a]))
