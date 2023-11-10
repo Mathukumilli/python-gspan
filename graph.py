@@ -77,9 +77,13 @@ if __name__ == '__main__':
     if s=="":
         raise Exception("input can't be empty")
     #s = 'This=s is a simple text but a complicated problem to be solved, so we are adding more text to see that it actually works.'
-    d= input("enter width:")
-    if type(d) != int:
-        raise Exception ("input should be of integer")
+    
+    d= int(input("enter width:")) 
+    try:
+        value = int(d) 
+    except ValueError:
+        
+        print('Valid number, please')
     if s=="":
         raise Exception("width can't be empty")
     if d<0:
